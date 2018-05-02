@@ -9,8 +9,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Clone and install netbox
-ENV NETBOX_COMMIT 594ef71027630d07b0c02866c03bf55f1d23b527
-RUN mkdir -p /usr/src/netbox \
+ENV NETBOX_COMMIT 328958876aae64fd970605704aaaa79af61de1d6
+    RUN mkdir -p /usr/src/netbox \
     && git clone https://github.com/digitalocean/netbox.git /usr/src/netbox \
     && (cd /usr/src/netbox && pip install --no-cache-dir -r requirements.txt)
 
